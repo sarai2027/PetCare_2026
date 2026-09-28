@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PetCare - Registro</title>
+<link href="CSS/auth.css" rel="stylesheet"/>
+<link href="CSS/header.css" rel="stylesheet"/>
+<link href="CSS/footer.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="CSS/site-overrides.css" rel="stylesheet"/>
+<link href="CSS/petcare-requested-fixes.css" rel="stylesheet"/>
+<link href="CSS/petcare-finalization.css" rel="stylesheet"/></head>
+<body>
+<div data-petcare-header=""></div>
+<div class="login-container">
+<div class="login-form-section">
+<div class="login-logo-box">
+<img alt="PetCare Logo" class="login-logo" src="IMG/logopetcareblanco.png"/>
+<h1 class="login-title">PetCare</h1>
+</div>
+<h2 class="login-subtitle">Crear cuenta</h2>
+<p class="login-description">Únete a nuestra comunidad de amantes de mascotas</p>
+<form action="index.html" class="login-form">
+<div class="input-group">
+<label>Nombre completo</label>
+<input placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div class="input-group">
+<label>Correo electrónico</label>
+<input placeholder="Ingresa tu correo" required="" type="email"/>
+</div>
+<div class="input-group">
+<label>Contraseña</label>
+<input placeholder="Crea una contraseña" required="" type="password"/>
+</div>
+<button class="btn-login" type="submit">Registrarse</button>
+<button class="guest-access" data-i18n="auth_guest" type="button">Continuar sin cuenta</button>
+</form>
+<p class="register-text">
+            ¿Ya tienes cuenta?
+            <a href="index.html">Inicia sesión aquí</a>
+</p>
+</div>
+<div class="login-image-section">
+<div class="circle-shape">
+<img alt="Mascotas" src="IMG/pets.jpg"/>
+</div>
+</div>
+</div>
+<!-- Modal global de idioma: requerido por el botón Idioma del header -->
+<div class="custom-modal" id="languageModal">
+<div class="modal-content-custom">
+<div class="modal-header-custom">
+<h5 data-i18n="lang_modal_title">Seleccionar idioma</h5>
+<button aria-label="Cerrar" class="close-btn" id="closeLanguageModal" type="button">×</button>
+</div>
+<div class="modal-body-custom">
+<div class="language-options">
+<button class="lang-option" data-lang="en" type="button">
+<img alt="UK" class="flag-img" src="https://flagcdn.com/w40/gb.png"/>
+          English (UK)
+        </button>
+<button class="lang-option" data-lang="es" type="button">
+<img alt="ES" class="flag-img" src="https://flagcdn.com/w40/es.png"/>
+          Español (ES)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<div data-petcare-footer=""></div>
+<script src="JS/shared.js"></script><script src="JS/auth.js"></script><script src="JS/petcare-requested-fixes.js"></script>
+<script src="JS/petcare-finalization.js"></script></body>
+</html>

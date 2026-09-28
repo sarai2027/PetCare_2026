@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Hamster">
+  <rect width="320" height="320" rx="160" fill="#f5eee7"/>
+  <circle cx="98" cy="91" r="45" fill="#b87949"/><circle cx="222" cy="91" r="45" fill="#b87949"/>
+  <circle cx="98" cy="91" r="25" fill="#efc6ad"/><circle cx="222" cy="91" r="25" fill="#efc6ad"/>
+  <ellipse cx="160" cy="172" rx="105" ry="112" fill="#d99c68"/>
+  <ellipse cx="160" cy="197" rx="77" ry="75" fill="#f3d7bd"/>
+  <circle cx="126" cy="152" r="11" fill="#241d1b"/><circle cx="194" cy="152" r="11" fill="#241d1b"/>
+  <circle cx="122" cy="148" r="3" fill="#fff"/><circle cx="190" cy="148" r="3" fill="#fff"/>
+  <path d="M149 179 Q160 169 171 179 Q160 191 149 179" fill="#8b4d48"/>
+  <path d="M160 188 Q146 202 135 190 M160 188 Q174 202 185 190" fill="none" stroke="#67443b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="99" cy="186" r="17" fill="#e8b091" opacity=".8"/><circle cx="221" cy="186" r="17" fill="#e8b091" opacity=".8"/>
+  <path d="M97 178 L42 169 M99 188 L38 190 M223 178 L278 169 M221 188 L282 190" stroke="#67443b" stroke-width="3" stroke-linecap="round"/>
+</svg>

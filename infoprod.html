@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<link href="CSS/header.css" rel="stylesheet"/><link href="CSS/footer.css" rel="stylesheet"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="page_title">Petcare | Información del producto</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="CSS/infoprod.css" rel="stylesheet"/>
+<script src="JS/languague.js"></script>
+<script src="JS/cart.js"></script>
+<link href="CSS/DarkMode.css" rel="stylesheet"/>
+<link href="CSS/site-overrides.css" rel="stylesheet"/>
+<link href="CSS/petcare-requested-fixes.css" rel="stylesheet"/>
+<link href="CSS/petcare-finalization.css" rel="stylesheet"/></head>
+<body><div data-petcare-header=""></div>
+<!-- ================= HEADER ================= -->
+<!-- ================= MENU MOVIL ================= -->
+<div class="collapse" id="mobileMenu">
+<div class="mobile-menu">
+<a data-pc-route="home" href="#">
+<i class="fa-solid fa-house"></i>
+<span data-i18n="nav_home">Home</span>
+</a>
+<a data-pc-route="products" href="#">
+<i class="fa-solid fa-paw"></i>
+<span data-i18n="nav_products">Productos</span>
+</a>
+<a data-pc-route="contact" href="#">
+<i class="fa-solid fa-phone"></i>
+<span data-i18n="nav_contact">Contacto</span>
+</a>
+<a data-pc-route="about" href="#">
+<i class="fa-solid fa-heart"></i>
+<span data-i18n="aboutus">Nosotros</span>
+</a>
+</div>
+</div>
+<!-- ================= CONTENIDO ================= -->
+<main>
+<!-- MIGAS DE PAN -->
+<div class="container">
+<div class="breadcrumb-petcare">
+<a data-i18n="breadcrumb_products" data-pc-route="products" href="#">
+                Productos
+            </a>
+<i class="fa-solid fa-chevron-right"></i>
+<span data-i18n="breadcrumb_category">
+                Juguetes para perros
+            </span>
+</div>
+</div>
+<!-- ================= PRODUCTO ================= -->
+<section class="product-section">
+<div class="container">
+<div class="product-box">
+<!-- IMAGEN PRINCIPAL -->
+<div class="product-gallery scroll-reveal">
+<div class="product-image-container">
+<span class="product-badge">
+<i class="fa-solid fa-star"></i>
+<span data-i18n="best_seller">
+                                Más vendido
+                            </span>
+</span>
+<img alt="Juguete de goma para perro" class="product-img" data-i18n="product_image_alt" src="IMG/producto1.jpg.jpeg"/>
+</div>
+</div>
+<!-- INFORMACIÓN -->
+<div class="product-info scroll-reveal-right">
+<span class="category" data-i18n="product_category">
+                        JUGUETES PARA MASCOTAS
+                    </span>
+<h1 data-i18n="product_name">
+                        Juguete de goma para perro
+                    </h1>
+<div class="rating">
+<span class="stars">
+                            ★★★★★
+                        </span>
+<span class="rating-number">
+                            4.9
+                        </span>
+<a data-i18n="reviews_count" href="#reviews">
+                            (28 reseñas)
+                        </a>
+</div>
+<div class="price">
+                        $9.99
+                    </div>
+<p class="product-description" data-i18n="product_description">
+                        Juguete resistente para perros de todas las edades.
+                        Ideal para jugar, morder y mantener a tu mascota
+                        entretenida durante horas.
+                    </p>
+<!-- CARACTERÍSTICAS -->
+<div class="features">
+<div class="feature">
+<i class="fa-solid fa-shield-dog"></i>
+<div>
+<strong data-i18n="feature_material">
+                                    Material resistente
+                                </strong>
+<span data-i18n="feature_material_desc">
+                                    Diseñado para juegos diarios
+                                </span>
+</div>
+</div>
+<div class="feature">
+<i class="fa-solid fa-paw"></i>
+<div>
+<strong data-i18n="feature_dogs">
+                                    Para perros
+                                </strong>
+<span data-i18n="feature_dogs_desc">
+                                    Apto para diferentes tamaños
+                                </span>
+</div>
+</div>
+<div class="feature">
+<i class="fa-solid fa-truck"></i>
+<div>
+<strong data-i18n="feature_shipping">
+                                    Envío disponible
+                                </strong>
+<span data-i18n="feature_shipping_desc">
+                                    Recíbelo en tu domicilio
+                                </span>
+</div>
+</div>
+</div>
+<!-- COLOR -->
+<h5 class="option-title" data-i18n="color_title">
+                        Color
+                    </h5>
+<div class="color-options">
+<button aria-label="Rojo" class="color-circle red" data-i18n-aria-label="color_red">
+</button>
+<button aria-label="Azul" class="color-circle blue" data-i18n-aria-label="color_blue">
+</button>
+<button aria-label="Verde" class="color-circle green" data-i18n-aria-label="color_green">
+</button>
+<button aria-label="Gris" class="color-circle gray" data-i18n-aria-label="color_gray">
+</button>
+</div>
+<!-- CANTIDAD -->
+<h5 class="option-title" data-i18n="quantity_title">
+                        Cantidad
+                    </h5>
+<div class="quantity">
+<button type="button">
+                            −
+                        </button>
+<input min="1" type="number" value="1"/>
+<button type="button">
+                            +
+                        </button>
+</div>
+<!-- COMPRAR -->
+<div class="purchase-buttons">
+<button class="btn-cart">
+<i class="fa-solid fa-cart-plus"></i>
+<span data-i18n="add_to_cart">
+                                Agregar al carrito
+                            </span>
+</button>
+<button aria-label="Agregar a favoritos" class="btn-favorite" data-i18n-aria-label="add_favorite">
+<i class="fa-regular fa-heart"></i>
+</button>
+</div>
+<div class="secure-purchase">
+<i class="fa-solid fa-lock"></i>
+<span data-i18n="secure_purchase">
+                            Compra segura y protegida
+                        </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= DETALLES ================= -->
+<section class="details-section scroll-reveal">
+<div class="container">
+<div class="section-title">
+<span data-i18n="learn_more">
+                    CONOCE MÁS
+                </span>
+<h2 data-i18n="product_details">
+                    Detalles del producto
+                </h2>
+</div>
+<div class="details-card scroll-reveal">
+<p data-i18n="details_description">
+                    Este juguete de goma está diseñado para proporcionar
+                    diversión y entretenimiento a tu mascota. Su material
+                    resistente permite utilizarlo durante juegos diarios
+                    y actividades de estimulación.
+                </p>
+<div class="detail-grid">
+<div>
+<i class="fa-solid fa-paw"></i>
+<strong data-i18n="detail_dogs">
+                            Producto para perros
+                        </strong>
+</div>
+<div>
+<i class="fa-solid fa-shield"></i>
+<strong data-i18n="detail_resistant">
+                            Material resistente
+                        </strong>
+</div>
+<div>
+<i class="fa-solid fa-heart"></i>
+<strong data-i18n="detail_fun">
+                            Diseño divertido
+                        </strong>
+</div>
+<div>
+<i class="fa-solid fa-bone"></i>
+<strong data-i18n="detail_play">
+                            Ideal para jugar
+                        </strong>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= GALERÍA ================= -->
+<section class="gallery-section scroll-reveal">
+<div class="container">
+<div class="section-title">
+<span data-i18n="gallery">
+                    GALERÍA
+                </span>
+<h2 data-i18n="see_product">
+                    Conoce el producto
+                </h2>
+</div>
+<div class="carousel slide product-carousel scroll-reveal" data-bs-ride="carousel" id="productCarousel">
+<div class="carousel-indicators">
+<button class="active" data-bs-slide-to="0" data-bs-target="#productCarousel" type="button">
+</button>
+<button data-bs-slide-to="1" data-bs-target="#productCarousel" type="button">
+</button>
+<button data-bs-slide-to="2" data-bs-target="#productCarousel" type="button">
+</button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="Producto Petcare" data-i18n="gallery_product_alt" src="IMG/producto2.jpg.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Juguete para perro" data-i18n="gallery_dog_toy_alt" src="IMG/producto3.jpg.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Detalle del juguete" data-i18n="gallery_detail_alt" src="IMG/producto4.jpg.jpeg"/>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#productCarousel" type="button">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#productCarousel" type="button">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= RESEÑAS ================= -->
+<section class="reviews-section scroll-reveal" id="reviews">
+<div class="container">
+<div class="section-title">
+<span data-i18n="opinions">
+                    OPINIONES
+                </span>
+<h2 data-i18n="customer_reviews">
+                    Lo que dicen nuestros clientes
+                </h2>
+</div>
+<div class="carousel slide reviews-carousel scroll-reveal" data-bs-ride="carousel" id="reviewsCarousel">
+<div class="carousel-inner">
+<!-- RESEÑA 1 -->
+<div class="carousel-item active">
+<div class="review-card">
+<div class="review-user">
+<div class="user-avatar">
+                                    M
+                                </div>
+<div>
+<h5>
+                                        María González
+                                    </h5>
+<span data-i18n="verified_customer">
+                                        Cliente verificado
+                                    </span>
+</div>
+</div>
+<div class="review-stars">
+                                ★★★★★
+                            </div>
+<p data-i18n="review_1">
+                                A mi perro le encantó. El juguete se siente
+                                resistente y ha sido perfecto para mantenerlo
+                                entretenido.
+                            </p>
+<small data-i18n="review_1_date">
+                                Hace 3 días
+                            </small>
+</div>
+</div>
+<!-- RESEÑA 2 -->
+<div class="carousel-item">
+<div class="review-card">
+<div class="review-user">
+<div class="user-avatar">
+                                    C
+                                </div>
+<div>
+<h5>
+                                        Carlos Martínez
+                                    </h5>
+<span data-i18n="verified_customer">
+                                        Cliente verificado
+                                    </span>
+</div>
+</div>
+<div class="review-stars">
+                                ★★★★★
+                            </div>
+<p data-i18n="review_2">
+                                Muy buen producto. Los materiales se sienten
+                                de buena calidad y el tamaño es perfecto.
+                            </p>
+<small data-i18n="review_2_date">
+                                Hace 1 semana
+                            </small>
+</div>
+</div>
+<!-- RESEÑA 3 -->
+<div class="carousel-item">
+<div class="review-card">
+<div class="review-user">
+<div class="user-avatar">
+                                    A
+                                </div>
+<div>
+<h5>
+                                        Andrea López
+                                    </h5>
+<span data-i18n="verified_customer">
+                                        Cliente verificado
+                                    </span>
+</div>
+</div>
+<div class="review-stars">
+                                ★★★★☆
+                            </div>
+<p data-i18n="review_3">
+                                Mi mascota disfruta mucho jugando con él.
+                                Definitivamente volvería a comprarlo.
+                            </p>
+<small data-i18n="review_3_date">
+                                Hace 2 semanas
+                            </small>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev review-control" data-bs-slide="prev" data-bs-target="#reviewsCarousel" type="button">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next review-control" data-bs-slide="next" data-bs-target="#reviewsCarousel" type="button">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= RELACIONADOS ================= -->
+<section class="related-section scroll-reveal">
+<div class="container">
+<div class="section-title">
+<span data-i18n="you_may_like">
+                    TAMBIÉN TE PUEDE INTERESAR
+                </span>
+<h2 data-i18n="related_products">
+                    Productos relacionados
+                </h2>
+</div>
+<div class="row g-4">
+<!-- PRODUCTO RELACIONADO 1 -->
+<div class="col-md-4">
+<div class="related-card scroll-reveal">
+<div class="related-image">
+<img alt="Producto relacionado" data-i18n="related_image_alt" src="IMG/33.png"/>
+<span data-i18n="new">
+                                Nuevo
+                            </span>
+</div>
+<div class="related-body">
+<h5 data-i18n="related_product_1">
+                                Cepillo para mascotas
+                            </h5>
+<div class="related-rating">
+                                ★★★★★
+                            </div>
+<strong>
+                                $8.99
+                            </strong>
+<button class="btn-custom" data-i18n="buy" data-related-product="product-35" type="button">
+                                Comprar
+                            </button>
+</div>
+</div>
+</div>
+<!-- PRODUCTO RELACIONADO 2 -->
+<div class="col-md-4">
+<div class="related-card scroll-reveal">
+<div class="related-image">
+<img alt="Producto relacionado" data-i18n="related_image_alt" src="IMG/27.png"/>
+</div>
+<div class="related-body">
+<h5 data-i18n="related_product_2">
+                                Dispensador de comida
+                            </h5>
+<div class="related-rating">
+                                ★★★★★
+                            </div>
+<strong>
+                                $12.99
+                            </strong>
+<button class="btn-custom" data-i18n="buy" data-related-product="product-3" type="button">
+                                Comprar
+                            </button>
+</div>
+</div>
+</div>
+<!-- PRODUCTO RELACIONADO 3 -->
+<div class="col-md-4">
+<div class="related-card scroll-reveal">
+<div class="related-image">
+<img alt="Producto relacionado" data-i18n="related_image_alt" src="IMG/4.png"/>
+</div>
+<div class="related-body">
+<h5 data-i18n="related_product_3">
+                                Alimento para gato - Félix
+                            </h5>
+<div class="related-rating">
+                                ★★★★☆
+                            </div>
+<strong>
+                                $10.99
+                            </strong>
+<button class="btn-custom" data-i18n="buy" data-related-product="product-29" type="button">
+                                Comprar
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER ================= -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Animaciones propias -->
+<script src="JS/infoprod.js"></script>
+<!-- Modal global de idioma: requerido por el botón Idioma del header -->
+<div class="custom-modal" id="languageModal">
+<div class="modal-content-custom">
+<div class="modal-header-custom">
+<h5 data-i18n="lang_modal_title">Seleccionar idioma</h5>
+<button aria-label="Cerrar" class="close-btn" id="closeLanguageModal" type="button">×</button>
+</div>
+<div class="modal-body-custom">
+<div class="language-options">
+<button class="lang-option" data-lang="en" type="button">
+<img alt="UK" class="flag-img" src="https://flagcdn.com/w40/gb.png"/>
+          English (UK)
+        </button>
+<button class="lang-option" data-lang="es" type="button">
+<img alt="ES" class="flag-img" src="https://flagcdn.com/w40/es.png"/>
+          Español (ES)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<div data-petcare-footer=""></div><script src="JS/shared.js"></script><script src="JS/petcare-requested-fixes.js"></script>
+<script src="JS/petcare-finalization.js"></script></body>
+</html>

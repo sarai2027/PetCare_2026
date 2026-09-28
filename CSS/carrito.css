@@ -1,0 +1,2239 @@
+/* =========================================================
+   PETCARE — SHOPPING CART
+   DISEÑO CENTRAL
+   FUNCIONALIDAD CONSERVADA
+   HEADER Y FOOTER CONSERVADOS
+   ========================================================= */
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+html,
+body {
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    overflow-x: hidden !important;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+a {
+
+    outline: none;
+
+}
+
+a:focus {
+
+    outline: none;
+
+    box-shadow: none;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.top-header {
+
+    background: #141122;
+
+    height: 70px;
+
+}
+
+.top-header .container {
+
+    display: flex;
+
+    align-items: center;
+
+    height: 100%;
+
+}
+
+.logo-box {
+
+    padding-right: 25px;
+
+}
+
+.imgNav {
+
+    width: 150px;
+
+}
+
+.header-info {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin-left: 25px;
+
+}
+
+.info-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+}
+
+.info-box i {
+
+    font-size: 28px;
+
+}
+
+.info-box h6 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+.info-box small {
+
+    color: #c5c5c5;
+
+}
+
+.user-icon {
+
+    margin-left: auto;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+.user-icon:hover {
+
+    color: #7d6cff;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+#contenedorCarrito {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(340px, 1fr);
+
+    gap: 60px;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding: 65px 55px 80px;
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   CARRITO
+   ========================================================= */
+
+#carrito {
+
+    min-width: 0;
+
+}
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #141122;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+    transition: .3s;
+
+}
+
+.back-btn i {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #141122;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.back-btn:hover {
+
+    color: #6f5de7;
+
+}
+
+.back-btn:hover i {
+
+    transform: translateX(-4px);
+
+    background: #292443;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.InfoCar {
+
+    margin-bottom: 35px;
+
+}
+
+.cart-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(125, 108, 255, .15),
+            transparent 30%
+        );
+
+    padding: 25px 0;
+
+}
+
+.section-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #7565e8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+.section-tag i {
+
+    font-size: 15px;
+
+}
+
+.InfoCar h1 {
+
+    font-size:
+        clamp(40px, 5vw, 58px);
+
+    font-weight: 800;
+
+    color: #141122;
+
+    margin: 0 0 12px;
+
+    letter-spacing: -1.5px;
+
+}
+
+.cart-intro {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #777286;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+.cart-decoration {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 28px;
+
+    background: #292443;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 15px
+        35px
+        rgba(41,36,67,.18);
+
+    transform:
+        rotate(5deg);
+
+}
+
+.cart-decoration i {
+
+    transform:
+        rotate(-5deg);
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DE PRODUCTOS
+   ========================================================= */
+
+.cart-products-header {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        auto;
+
+    gap: 40px;
+
+    padding: 0 25px 14px;
+
+    border-bottom:
+        1px solid
+        #e6e3ed;
+
+    color:
+        #9994a8;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.3px;
+
+}
+
+.cart-products-header span:nth-child(2) {
+
+    text-align:
+        center;
+
+}
+
+.cart-products-header span:nth-child(3) {
+
+    min-width:
+        80px;
+
+    text-align:
+        right;
+
+}
+
+
+/* =========================================================
+   PRODUCTOS DEL CARRITO
+   ========================================================= */
+
+#cart-items-container {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        15px;
+
+    margin-top:
+        18px;
+
+}
+
+.productsCar {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        22px 25px;
+
+    border-radius:
+        22px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #eceaf2;
+
+    box-shadow:
+        0 8px
+        25px
+        rgba(20,17,34,.055);
+
+    transition:
+        .3s ease;
+
+}
+
+.productsCar:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #dcd7f4;
+
+    box-shadow:
+        0 15px
+        35px
+        rgba(41,36,67,.10);
+
+}
+
+.productsCar img {
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        16px;
+
+    background:
+        #f5f3fa;
+
+    padding:
+        8px;
+
+}
+
+.infoProducto {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    margin-left:
+        5px;
+
+    flex:
+        1;
+
+}
+
+.infoProducto h5 {
+
+    color:
+        #171329;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        5px;
+
+}
+
+.precio {
+
+    color:
+        #6d5bd0;
+
+    font-weight:
+        800;
+
+    font-size:
+        22px;
+
+}
+
+.cantidad {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    margin-left:
+        auto;
+
+}
+
+.btnCant {
+
+    background-color:
+        #292443;
+
+    color:
+        white;
+
+    padding:
+        10px 25px;
+
+    border-radius:
+        30px;
+
+    margin-left:
+        auto;
+
+}
+
+.btnCant p {
+
+    font-size:
+        20px;
+
+    margin:
+        0;
+
+    font-weight:
+        bold;
+
+}
+
+.btnCar {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+}
+
+.btnCar div {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border:
+        2px solid
+        #ddd9e7;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    font-weight:
+        bold;
+
+    background:
+        #ffffff;
+
+    transition:
+        .2s;
+
+}
+
+.btnCar div:hover {
+
+    border-color:
+        #7d6cff;
+
+    background:
+        #f5f3ff;
+
+}
+
+.btnCar p {
+
+    margin:
+        0;
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+}
+
+
+/* =========================================================
+   CONTINUAR COMPRANDO
+   ========================================================= */
+
+.continue-shopping {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-top:
+        25px;
+
+    padding:
+        20px 24px;
+
+    border-radius:
+        18px;
+
+    background:
+        #f6f4fb;
+
+    border:
+        1px solid
+        #ebe8f4;
+
+}
+
+.continue-shopping > i {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        #292443;
+
+    color:
+        white;
+
+    flex-shrink:
+        0;
+
+}
+
+.continue-shopping strong {
+
+    display:
+        block;
+
+    color:
+        #292443;
+
+    font-size:
+        14px;
+
+}
+
+.continue-shopping p {
+
+    margin:
+        3px 0 0;
+
+    color:
+        #858092;
+
+    font-size:
+        13px;
+
+}
+
+.continue-shopping a {
+
+    margin-left:
+        auto;
+
+    color:
+        #6756cc;
+
+    text-decoration:
+        none;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+    transition:
+        .2s;
+
+}
+
+.continue-shopping a:hover {
+
+    color:
+        #292443;
+
+}
+
+.continue-shopping a i {
+
+    margin-left:
+        5px;
+
+}
+
+
+/* =========================================================
+   RESUMEN DE PAGO
+   ========================================================= */
+
+#metodoPago {
+
+    align-self:
+        start;
+
+    border-left:
+        none;
+
+    padding:
+        35px;
+
+    border-radius:
+        28px;
+
+    background:
+        #f7f5fb;
+
+    border:
+        1px solid
+        #e7e3f0;
+
+    box-shadow:
+        0 18px
+        45px
+        rgba(20,17,34,.08);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    position:
+        sticky;
+
+    top:
+        30px;
+
+}
+
+.summary-label {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        #7565e8;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    margin-bottom:
+        14px;
+
+}
+
+.summary-label i {
+
+    font-size:
+        14px;
+
+}
+
+.Pago h3 {
+
+    color:
+        #171329;
+
+    font-weight:
+        800;
+
+    font-size:
+        34px;
+
+    margin:
+        0 0 10px;
+
+}
+
+.summary-description {
+
+    color:
+        #858092;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+    margin:
+        0;
+
+}
+
+.summary-divider {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    background:
+        #dfdbe8;
+
+    margin:
+        22px 0;
+
+}
+
+.summary-row {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    color:
+        #676173;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        15px;
+
+}
+
+.summary-row span:last-child {
+
+    text-align:
+        right;
+
+    color:
+        #292443;
+
+    font-weight:
+        600;
+
+}
+
+.summary-row .free-text {
+
+    color:
+        #6d5bd0;
+
+    font-weight:
+        800;
+
+}
+
+.Pago .totalPago {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    color:
+        #292443;
+
+    font-size:
+        19px;
+
+    margin:
+        0;
+
+}
+
+.Pago .totalPago b {
+
+    color:
+        #141122;
+
+    font-size:
+        34px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* =========================================================
+   SEGURIDAD
+   ========================================================= */
+
+.secure-checkout {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        13px;
+
+    margin-top:
+        25px;
+
+    padding:
+        16px;
+
+    border-radius:
+        16px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #e8e4ef;
+
+}
+
+.secure-checkout > i {
+
+    color:
+        #6f5de0;
+
+    font-size:
+        22px;
+
+    margin-top:
+        2px;
+
+}
+
+.secure-checkout strong {
+
+    display:
+        block;
+
+    color:
+        #292443;
+
+    font-size:
+        13px;
+
+}
+
+.secure-checkout p {
+
+    color:
+        #858092;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+    margin:
+        4px 0 0;
+
+}
+
+
+/* =========================================================
+   BOTÓN CHECKOUT
+   ========================================================= */
+
+.btnPago {
+
+    margin-top:
+        25px;
+
+}
+
+.btnPago button {
+
+    width:
+        100%;
+
+    border:
+        none;
+
+    background:
+        #292443;
+
+    color:
+        white;
+
+    min-height:
+        60px;
+
+    padding:
+        0 25px;
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+    border-radius:
+        35px;
+
+    transition:
+        .3s ease;
+
+    box-shadow:
+        0 10px
+        20px
+        rgba(41,36,67,.16);
+
+}
+
+.btnPago button i {
+
+    margin-left:
+        10px;
+
+    transition:
+        .3s;
+
+}
+
+.btnPago button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        #3b345e;
+
+    box-shadow:
+        0 15px
+        28px
+        rgba(41,36,67,.22);
+
+}
+
+.btnPago button:hover i {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =========================================================
+   BENEFICIOS DEL CHECKOUT
+   ========================================================= */
+
+.checkout-info {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        22px;
+
+}
+
+.checkout-feature {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    min-height:
+        72px;
+
+    padding:
+        8px;
+
+    border-radius:
+        14px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #e9e5f0;
+
+    text-align:
+        center;
+
+}
+
+.checkout-feature i {
+
+    color:
+        #7665df;
+
+    font-size:
+        17px;
+
+}
+
+.checkout-feature span {
+
+    color:
+        #777182;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* Footer: uses the global CSS/footer.css without cart-specific overrides. */
+
+/* =========================================================
+   CART ICON / TOAST
+   ========================================================= */
+
+.cart-icon {
+
+    position:
+        relative;
+
+    margin-right:
+        20px;
+
+}
+
+.cart-icon a {
+
+    color:
+        white;
+
+    font-size:
+        32px;
+
+}
+
+.cart-count {
+
+    position:
+        absolute;
+
+    top:
+        -8px;
+
+    right:
+        -10px;
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    border-radius:
+        50%;
+
+    background:
+        red;
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+}
+
+.toast-custom {
+
+    position:
+        fixed;
+
+    bottom:
+        -100px;
+
+    right:
+        30px;
+
+    background-color:
+        #8B6BFF;
+
+    color:
+        white;
+
+    padding:
+        15px 25px;
+
+    border-radius:
+        10px;
+
+    font-weight:
+        bold;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    box-shadow:
+        0 10px
+        20px
+        rgba(0,0,0,.5);
+
+    transition:
+        bottom
+        .4s
+        cubic-bezier(.68,-.55,.265,1.55);
+
+    z-index:
+        10000;
+
+}
+
+.toast-custom.mostrar {
+
+    bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+*:focus {
+
+    outline:
+        none;
+
+}
+
+*:focus-visible {
+
+    outline:
+        3px solid
+        #8B6BFF;
+
+    outline-offset:
+        3px;
+
+    border-radius:
+        5px;
+
+}
+
+
+/* =========================================================
+   =========================================================
+   DARK MODE — SHOPPING CART
+   =========================================================
+   ========================================================= */
+
+body.dark-mode #contenedorCarrito {
+
+    background:
+        transparent !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Fondo del carrito
+   --------------------------------------------------------- */
+
+body.dark-mode #carrito {
+
+    color:
+        #f5f3fa !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Botón volver
+   --------------------------------------------------------- */
+
+body.dark-mode .back-btn {
+
+    color:
+        #d8d3df !important;
+
+}
+
+body.dark-mode .back-btn:hover {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .back-btn i {
+
+    background:
+        #282238 !important;
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .back-btn:hover i {
+
+    background:
+        #39314d !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Header del carrito
+   --------------------------------------------------------- */
+
+body.dark-mode .cart-heading {
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(155,124,255,.12),
+            transparent 30%
+        ) !important;
+
+}
+
+body.dark-mode .section-tag {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .InfoCar h1 {
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .cart-intro {
+
+    color:
+        #a8a2af !important;
+
+}
+
+body.dark-mode .cart-decoration {
+
+    background:
+        #29233a !important;
+
+    color:
+        #b8a6ff !important;
+
+    box-shadow:
+        0 15px
+        35px
+        rgba(0,0,0,.24) !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Encabezado de columnas
+   --------------------------------------------------------- */
+
+body.dark-mode .cart-products-header {
+
+    border-bottom-color:
+        #342e43 !important;
+
+    color:
+        #898390 !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Tarjetas de productos
+   --------------------------------------------------------- */
+
+body.dark-mode .productsCar {
+
+    background:
+        #181522 !important;
+
+    border-color:
+        #342e43 !important;
+
+    color:
+        #f5f3fa !important;
+
+    box-shadow:
+        0 8px
+        25px
+        rgba(0,0,0,.20) !important;
+
+}
+
+body.dark-mode .productsCar:hover {
+
+    background:
+        #1d1928 !important;
+
+    border-color:
+        #514666 !important;
+
+    box-shadow:
+        0 15px
+        35px
+        rgba(0,0,0,.30) !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Imagen del producto
+   --------------------------------------------------------- */
+
+body.dark-mode .productsCar img {
+
+    background:
+        #282337 !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Nombre del producto
+   --------------------------------------------------------- */
+
+body.dark-mode .infoProducto h5 {
+
+    color:
+        #ffffff !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Precio
+   --------------------------------------------------------- */
+
+body.dark-mode .precio {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Botón de cantidad
+   --------------------------------------------------------- */
+
+body.dark-mode .btnCant {
+
+    background:
+        #29233a !important;
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .btnCant p {
+
+    color:
+        #ffffff !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Botones + y -
+   --------------------------------------------------------- */
+
+body.dark-mode .btnCar div {
+
+    background:
+        #282337 !important;
+
+    border-color:
+        #443d50 !important;
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .btnCar div:hover {
+
+    background:
+        #302a3d !important;
+
+    border-color:
+        #9b7cff !important;
+
+}
+
+body.dark-mode .btnCar p {
+
+    color:
+        #ffffff !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Continuar comprando
+   --------------------------------------------------------- */
+
+body.dark-mode .continue-shopping {
+
+    background:
+        #1b1726 !important;
+
+    border-color:
+        #342e43 !important;
+
+}
+
+body.dark-mode .continue-shopping > i {
+
+    background:
+        #29233a !important;
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .continue-shopping strong {
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .continue-shopping p {
+
+    color:
+        #9b95a3 !important;
+
+}
+
+body.dark-mode .continue-shopping a {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .continue-shopping a:hover {
+
+    color:
+        #d0c5ff !important;
+
+}
+
+
+/* =========================================================
+   RESUMEN DE PAGO
+   ========================================================= */
+
+body.dark-mode #metodoPago {
+
+    background:
+        #181522 !important;
+
+    border-color:
+        #342e43 !important;
+
+    box-shadow:
+        0 18px
+        45px
+        rgba(0,0,0,.25) !important;
+
+}
+
+body.dark-mode .summary-label {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .Pago h3 {
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .summary-description {
+
+    color:
+        #9e98a6 !important;
+
+}
+
+body.dark-mode .summary-divider {
+
+    background:
+        #342e43 !important;
+
+}
+
+body.dark-mode .summary-row {
+
+    color:
+        #a8a2af !important;
+
+}
+
+body.dark-mode .summary-row span:last-child {
+
+    color:
+        #f0edf4 !important;
+
+}
+
+body.dark-mode .summary-row .free-text {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .Pago .totalPago {
+
+    color:
+        #d9d3e2 !important;
+
+}
+
+body.dark-mode .Pago .totalPago b {
+
+    color:
+        #ffffff !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Seguridad del checkout
+   --------------------------------------------------------- */
+
+body.dark-mode .secure-checkout {
+
+    background:
+        #211d2d !important;
+
+    border-color:
+        #393244 !important;
+
+}
+
+body.dark-mode .secure-checkout > i {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .secure-checkout strong {
+
+    color:
+        #ffffff !important;
+
+}
+
+body.dark-mode .secure-checkout p {
+
+    color:
+        #9f99a7 !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Botón Checkout
+   --------------------------------------------------------- */
+
+body.dark-mode .btnPago button {
+
+    background:
+        #302940 !important;
+
+    color:
+        #ffffff !important;
+
+    box-shadow:
+        0 10px
+        25px
+        rgba(0,0,0,.25) !important;
+
+}
+
+body.dark-mode .btnPago button:hover {
+
+    background:
+        #9b7cff !important;
+
+    color:
+        #ffffff !important;
+
+    box-shadow:
+        0 15px
+        30px
+        rgba(0,0,0,.35) !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   Características inferiores
+   --------------------------------------------------------- */
+
+body.dark-mode .checkout-feature {
+
+    background:
+        #211d2d !important;
+
+    border-color:
+        #393244 !important;
+
+}
+
+body.dark-mode .checkout-feature i {
+
+    color:
+        #b8a6ff !important;
+
+}
+
+body.dark-mode .checkout-feature span {
+
+    color:
+        #9e98a6 !important;
+
+}
+
+
+/* =========================================================
+   TOAST DARK MODE
+   ========================================================= */
+
+body.dark-mode .toast-custom {
+
+    background:
+        #312844 !important;
+
+    color:
+        #ffffff !important;
+
+    border:
+        1px solid
+        #4a3d63 !important;
+
+    box-shadow:
+        0 12px
+        30px
+        rgba(0,0,0,.45) !important;
+
+}
+
+
+/* Footer dark mode also remains controlled by the global footer styles. */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    #contenedorCarrito {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+
+        padding:
+            50px 35px 70px;
+
+    }
+
+    #metodoPago {
+
+        position:
+            relative;
+
+        top:
+            auto;
+
+    }
+
+    .checkout-info {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header-info {
+
+        display:
+            none;
+
+    }
+
+    .logo-box {
+
+        border-right:
+            none;
+
+        padding-right:
+            0;
+
+    }
+
+    #contenedorCarrito {
+
+        padding:
+            40px 20px 60px;
+
+    }
+
+    .cart-heading {
+
+        padding:
+            10px 0 20px;
+
+    }
+
+    .cart-decoration {
+
+        width:
+            65px;
+
+        height:
+            65px;
+
+        border-radius:
+            20px;
+
+        font-size:
+            27px;
+
+    }
+
+    .InfoCar h1 {
+
+        font-size:
+            40px;
+
+    }
+
+    .cart-intro {
+
+        font-size:
+            15px;
+
+    }
+
+    .cart-products-header {
+
+        display:
+            none;
+
+    }
+
+    .productsCar {
+
+        flex-wrap:
+            wrap;
+
+        padding:
+            18px;
+
+    }
+
+    .productsCar img {
+
+        width:
+            75px;
+
+        height:
+            75px;
+
+    }
+
+    .infoProducto {
+
+        min-width:
+            calc(100% - 110px);
+
+    }
+
+    .cantidad {
+
+        width:
+            100%;
+
+        justify-content:
+            flex-end;
+
+        margin-top:
+            8px;
+
+    }
+
+    .continue-shopping {
+
+        align-items:
+            flex-start;
+
+        flex-wrap:
+            wrap;
+
+    }
+
+    .continue-shopping a {
+
+        width:
+            100%;
+
+        margin-left:
+            57px;
+
+    }
+
+    #metodoPago {
+
+        padding:
+            25px;
+
+        border-radius:
+            22px;
+
+    }
+
+    .Pago h3 {
+
+        font-size:
+            30px;
+
+    }
+
+    .Pago .totalPago b {
+
+        font-size:
+            28px;
+
+    }
+
+    .footer-columns {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+    }
+
+    .footer-col ul li {
+
+        padding-left:
+            0;
+
+    }
+
+    .footer-col ul li::before {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .cart-heading {
+
+        display:
+            block;
+
+    }
+
+    .cart-decoration {
+
+        display:
+            none;
+
+    }
+
+    .InfoCar h1 {
+
+        font-size:
+            36px;
+
+    }
+
+    .productsCar {
+
+        gap:
+            12px;
+
+    }
+
+    .btnCar {
+
+        gap:
+            8px;
+
+    }
+
+    .btnCar div {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+    }
+
+    .btnCant {
+
+        padding:
+            8px 18px;
+
+    }
+
+    .checkout-info {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .checkout-feature {
+
+        flex-direction:
+            row;
+
+        justify-content:
+            flex-start;
+
+        padding:
+            12px 16px;
+
+    }
+
+}
+
+/* =========================================================
+   PETCARE — CORRECCIÓN PUNTUAL DEL CARRITO VACÍO
+   ========================================================= */
+
+body.dark-mode #cart-items-container > div:not(.cart-card-item) {
+    background: #201c2d !important;
+    border-color: #40384f !important;
+    color: #f5f3fa !important;
+}
+
+body.dark-mode #cart-items-container > div:not(.cart-card-item) h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode #cart-items-container > div:not(.cart-card-item) p {
+    color: #c6c0ce !important;
+}

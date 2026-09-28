@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="CSS/header.css" rel="stylesheet"/>
+<link href="CSS/footer.css" rel="stylesheet"/>
+<title>Ajustes | Petcare</title>
+<link href="CSS/GeneralSetting.css" rel="stylesheet"/>
+<link href="CSS/accessibility.css" rel="stylesheet"/>
+<link href="CSS/DarkMode.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="JS/AccessibilityVoice.js"></script>
+<script src="JS/Accessibility.js"></script>
+<script src="JS/settings-accessibility.js"></script>
+<script src="JS/DarkMode.js"></script>
+<link href="CSS/site-overrides.css" rel="stylesheet"/>
+<link href="CSS/petcare-requested-fixes.css" rel="stylesheet"/>
+<link href="CSS/petcare-finalization.css" rel="stylesheet"/></head>
+<body>
+<div data-petcare-header=""></div>
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<!-- =========================================================
+     GENERAL SETTINGS
+     ========================================================= -->
+<div class="settings-page">
+<div class="settings-layout">
+<!-- =================================================
+             SIDEBAR
+             ================================================= -->
+<aside class="settings-sidebar">
+<div class="settings-sidebar-header">
+<span class="sidebar-eyebrow">
+<i class="fa-solid fa-sliders"></i>
+                    PETCARE SETTINGS
+                </span>
+<h2 data-i18n="settings_title">
+                    Settings
+                </h2>
+<p data-i18n="settings_description">
+                    Manage your preferences and account settings
+                </p>
+</div>
+<nav aria-label="Menú de ajustes" class="settings-navigation">
+<a class="settings-nav-item active" data-pc-route="settings" href="#">
+<i class="fa-solid fa-sliders"></i>
+<span data-i18n="general_title">General Settings</span>
+</a>
+<a class="settings-nav-item" data-pc-route="appearance" href="#">
+<i class="fa-solid fa-palette"></i>
+<span data-i18n="appearance_title">Appearance</span>
+</a>
+<a class="settings-nav-item" data-pc-route="account" href="#">
+<i class="fa-regular fa-circle-user"></i>
+<span data-i18n="account_title">Account</span>
+</a>
+<a class="settings-nav-item" data-pc-route="accessibility" href="#">
+<i class="fa-solid fa-universal-access"></i>
+<span data-i18n="accessibility_title">Accessibility</span>
+</a>
+</nav>
+<div class="sidebar-note">
+<div class="sidebar-note-icon">
+<i class="fa-solid fa-paw"></i>
+</div>
+<div>
+<strong>
+                        PetCare
+                    </strong>
+<span>
+                        Customize your experience.
+                    </span>
+</div>
+</div>
+</aside>
+<!-- =================================================
+             MAIN SETTINGS PANEL
+             ================================================= -->
+<main class="settings-main">
+<div class="settings-main-header">
+<div>
+<span class="section-kicker">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+                        PERSONALIZE YOUR EXPERIENCE
+                    </span>
+<h1 data-i18n="general_title">
+                        General
+                    </h1>
+<p data-i18n="general_description">
+                        Manage the basic settings of your experience.
+                    </p>
+</div>
+<div class="header-decoration">
+<i class="fa-solid fa-paw"></i>
+</div>
+</div>
+<div class="settings-divider"></div>
+<div class="settings-options">
+<!-- =================================================
+                     THEME
+                     ================================================= -->
+<section class="setting-card theme-setting-card">
+<div class="setting-card-header">
+<div class="setting-icon-box">
+<i class="fa-solid fa-palette"></i>
+</div>
+<div>
+<h2 data-i18n="general_theme">
+                                Theme
+                            </h2>
+<p data-i18n="general_theme_description">
+                                Choose how PetCare looks.
+                            </p>
+</div>
+</div>
+<div class="theme-options">
+<button class="theme-btn active">
+<i class="fa-regular fa-sun"></i>
+<span data-i18n="theme_light">
+                                Light
+                            </span>
+</button>
+<button class="theme-btn">
+<i class="fa-regular fa-moon"></i>
+<span data-i18n="theme_dark">
+                                Dark
+                            </span>
+</button>
+<button class="theme-btn">
+<i class="fa-solid fa-desktop"></i>
+<span data-i18n="theme_system">
+                                System
+                            </span>
+</button>
+</div>
+</section>
+<!-- =================================================
+                     TIME ZONE
+                     ================================================= -->
+<section class="setting-card">
+<div class="setting-row">
+<div class="setting-card-header compact-header">
+<div class="setting-icon-box">
+<i class="fa-regular fa-clock"></i>
+</div>
+<div>
+<h2 data-i18n="general_timezone">
+                                    Time Zone
+                                </h2>
+<p data-i18n="general_timezone_description">
+                                    Select your time zone.
+                                </p>
+</div>
+</div>
+<div class="setting-control">
+<div class="dropdown custom-dropdown" data-setting="timezone">
+<button aria-expanded="false" class="btn setting-select" data-bs-toggle="dropdown" type="button">
+<span class="selected-text" data-i18n="timezone_est">
+                                        (GMT-05:00) Eastern Time
+                                    </span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" data-i18n="timezone_est" data-value="est" href="#">
+                                            (GMT-05:00) Eastern Time
+                                        </a>
+</li>
+<li>
+<a class="dropdown-item" data-i18n="timezone_cst" data-value="cst" href="#">
+                                            (GMT-06:00) Central Time
+                                        </a>
+</li>
+<li>
+<a class="dropdown-item" data-i18n="timezone_pst" data-value="pst" href="#">
+                                            (GMT-08:00) Pacific Time
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- =================================================
+                     CURRENCY
+                     ================================================= -->
+<section class="setting-card">
+<div class="setting-row">
+<div class="setting-card-header compact-header">
+<div class="setting-icon-box">
+<i class="fa-solid fa-dollar-sign"></i>
+</div>
+<div>
+<h2 data-i18n="general_currency">
+                                    Currency
+                                </h2>
+<p data-i18n="general_currency_description">
+                                    Select your preferred currency.
+                                </p>
+</div>
+</div>
+<div class="setting-control">
+<select class="form-select custom-select-dark" data-setting="currency">
+<option class="bg-white text-dark" data-i18n="currency_usd" value="usd">
+                                    USD - US Dollar
+                                </option>
+<option class="bg-white text-dark" data-i18n="currency_eur" value="eur">
+                                    EUR - Euro
+                                </option>
+</select>
+</div>
+</div>
+</section>
+</div>
+<!-- =================================================
+                 SAVE
+                 ================================================= -->
+<section class="setting-card auth-access-card">
+<div class="setting-row">
+<div class="setting-card-header compact-header">
+<div class="setting-icon-box">
+<i class="fa-solid fa-user-lock"></i>
+</div>
+<div>
+<h2 data-i18n="auth_access_title">Acceso a tu cuenta</h2>
+<p data-i18n="auth_access_text">Inicia sesión o crea una cuenta para gestionar tu experiencia en PetCare.</p>
+</div>
+</div>
+<div class="auth-access-actions">
+<a class="settings-auth-btn primary" data-i18n="auth_login" data-pc-route="login" href="#">Iniciar sesión</a>
+<a class="settings-auth-btn" data-i18n="auth_signup" data-pc-route="signup" href="#">Crear cuenta</a>
+</div>
+</div>
+</section>
+<div class="settings-save-area">
+<div class="save-message">
+<i class="fa-solid fa-circle-info"></i>
+<span>
+                        Your preferences can be updated at any time.
+                    </span>
+</div>
+<button class="save-settings-btn" data-i18n="general_save_changes">
+<i class="fa-solid fa-check"></i>
+                    Save Changes
+
+                </button>
+</div>
+</main>
+</div>
+</div>
+<!-- =========================================================
+     LANGUAGE MODAL
+     ========================================================= -->
+<div class="custom-modal" id="languageModal">
+<div class="modal-content-custom">
+<div class="modal-header-custom">
+<h5>
+                Select Language / Idioma
+            </h5>
+<button class="close-btn" id="closeLanguageModal">
+                ×
+            </button>
+</div>
+<div class="modal-body-custom">
+<div class="language-options">
+<button class="lang-option active" data-flag-src="https://flagcdn.com/w40/gb.png" data-lang="en">
+<img alt="UK" class="flag-img" src="https://flagcdn.com/w40/gb.png"/>
+
+                    English (UK)
+
+                </button>
+<button class="lang-option" data-flag-src="https://flagcdn.com/w40/es.png" data-lang="es">
+<img alt="ES" class="flag-img" src="https://flagcdn.com/w40/es.png"/>
+
+                    Español (ES)
+
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<div data-petcare-footer=""></div>
+<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<script src="JS/languague.js"></script>
+<script src="JS/cart.js"></script>
+<script src="JS/AddCart.js"></script>
+<script src="JS/filterBy.js"></script>
+<script src="JS/Dropdown.js"></script>
+<script src="JS/shared.js"></script>
+<script src="JS/petcare-requested-fixes.js"></script>
+<script src="JS/general-settings-state.js"></script>
+<script src="JS/petcare-finalization.js"></script></body>
+</html>

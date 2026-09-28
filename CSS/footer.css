@@ -1,0 +1,39 @@
+/* PETCARE — FOOTER ÚNICO GLOBAL, REFERENCIA CONTACTO */
+.footer-petcare{
+  width:100%;
+  margin-top:0;
+  padding:64px max(30px,7vw) 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(117,100,168,.18), transparent 28%),
+    linear-gradient(135deg,#120e1e 0%,#18142a 48%,#211b38 100%);
+  color:#d8d5df;
+  border-top:1px solid rgba(117,100,168,.25);
+  overflow:hidden;
+}
+.footer-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr 1.1fr;gap:42px;
+  padding-bottom:48px;
+}
+.footer-brand h2{margin:14px 0 12px;color:#fff;font-size:26px;font-weight:800;letter-spacing:-.5px}
+.footer-brand p,.footer-col a,.footer-social p{color:#9b97a6;font:14px/1.75 Arial,Helvetica,sans-serif}
+.footer-brand p{margin:0;max-width:390px}
+.footer-logo-link{display:inline-flex;width:58px;height:58px;align-items:center;justify-content:center;border-radius:18px;background:#342b59;border:1px solid rgba(117,100,168,.3);transition:.25s}
+.footer-logo-link:hover{transform:translateY(-3px);background:#5b4b8a}
+.footer-logo-img{width:42px;height:42px;object-fit:contain}
+.footer-col,.footer-social{display:flex;flex-direction:column;align-items:flex-start}
+.footer-col h3,.footer-social h3{margin:2px 0 18px;color:#fff;font-size:15px;font-weight:800;letter-spacing:.4px;text-transform:uppercase}
+.footer-col a{margin:0 0 10px;text-decoration:none;transition:.2s}
+.footer-col a:hover{color:#7564a8;transform:translateX(3px)}
+.social-icons{display:flex;gap:10px;margin-bottom:22px}
+.social-icons a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(117,100,168,.35);border-radius:50%;color:#d8d5df;text-decoration:none;transition:.25s}
+.social-icons a:hover{background:#5b4b8a;border-color:#7564a8;color:#fff;transform:translateY(-3px)}
+.footer-tagline{margin-top:auto}
+.footer-bottom{
+  width:100%;max-width:1400px;margin:0 auto;padding:20px 0;
+  border-top:1px solid rgba(117,100,168,.18);
+  color:#9b97a6;text-align:center;font:12px/1.5 Arial,Helvetica,sans-serif;
+}
+@media(max-width:1100px){.footer-inner{grid-template-columns:1.5fr 1fr 1fr;gap:32px}}
+@media(max-width:700px){.footer-petcare{padding:48px 25px 0}.footer-inner{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:1/-1}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr}.footer-brand{grid-column:auto}}

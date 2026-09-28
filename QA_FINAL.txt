@@ -1,0 +1,31 @@
+PETCARE — FINAL QA (High Contrast + Product Color Labels)
+Date: 2026-09-28
+
+STATUS: READY FOR VS CODE / LIVE SERVER / GITHUB
+
+Changes in this revision
+- Preserved the previously delivered PetCare final version and its existing functions.
+- Unified High Contrast state across the complete website. Both legacy class names (`high-contrast` and `pc-high-contrast`) are synchronized for compatibility.
+- High Contrast is available from the floating accessibility menu on every complete page.
+- High Contrast is also restored as an independent control on accessibility.html.
+- Added/kept the separate product color-name aid (`Color names on products` / `Nombres de color en productos`).
+- The product color-name aid only affects selectable product color swatches; it does not recolor or label unrelated website text.
+- Product color swatches keep their real product colors in High Contrast, with strong borders, visible selected state, and optional text labels.
+- High Contrast covers navigation, footer, accessibility panel, settings/account surfaces, cards, products, forms, checkout/cart surfaces, modals, tables, badges and interactive controls.
+- Media is preserved rather than inverted; Leaflet map content is not destroyed by the global high-contrast styling.
+- Focus indicators use a strong yellow outline in High Contrast.
+- High Contrast works independently of Light/Dark Mode and overrides conflicting surface colors consistently.
+
+Static QA
+- HTML pages checked: 18.
+- Missing local HTML/CSS/JS/image/video references: 0.
+- All JavaScript files pass `node --check` syntax validation.
+- All complete HTML pages include the shared final accessibility CSS/JS layer.
+- Floating accessibility menu contains both High Contrast and Product Color Names controls.
+- Product color-name CSS is scoped to `.color-options` / `.color-circle` only.
+
+Recommended run method
+Open the project folder in VS Code and run it with Live Server so shared header/footer loading and browser APIs behave correctly.
+
+Browser note
+Voice recognition support still depends on browser Web Speech API support and microphone permission. Chrome/Edge are recommended for the best compatibility.

@@ -1,0 +1,193 @@
+/* PetCare final QA layer: accessibility menu, species filters and light/dark consistency. */
+.pc-accessibility-menu-root{position:fixed;right:22px;bottom:22px;z-index:9999;font-family:inherit}
+.pc-a11y-trigger{border:0;border-radius:999px;background:#5c43d6;color:#fff;box-shadow:0 10px 30px rgba(34,24,89,.25);display:flex;align-items:center;gap:9px;padding:12px 16px;font-weight:700;cursor:pointer;transition:.2s ease}
+.pc-a11y-trigger:hover,.pc-a11y-trigger:focus-visible{transform:translateY(-2px);box-shadow:0 14px 34px rgba(34,24,89,.34)}
+.pc-a11y-trigger i{font-size:1.2rem}.pc-accessibility-panel{position:absolute;right:0;bottom:58px;width:min(360px,calc(100vw - 28px));background:#fff;color:#19172a;border:1px solid #e5e2f2;border-radius:18px;box-shadow:0 20px 55px rgba(20,17,34,.22);padding:14px;overflow:hidden}
+.pc-a11y-head{display:flex;align-items:center;justify-content:space-between;padding:5px 4px 12px;border-bottom:1px solid #ece9f6}.pc-a11y-head strong{font-size:1.05rem}.pc-a11y-head button{border:0;background:transparent;font-size:1.6rem;line-height:1;color:inherit;cursor:pointer}
+.pc-a11y-row,.pc-a11y-switch{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #f0eef6}.pc-a11y-row>span,.pc-a11y-switch>span{display:flex;align-items:center;gap:9px;font-weight:650}.pc-a11y-row>span i,.pc-a11y-switch>span i{width:18px;text-align:center;color:#6a52dd}
+.pc-segmented{display:flex;background:#f1eff8;padding:3px;border-radius:10px;gap:2px}.pc-segmented button{border:0;background:transparent;color:#3c3754;padding:6px 9px;border-radius:8px;font-weight:700;cursor:pointer}.pc-segmented button.active{background:#fff;color:#4e37c6;box-shadow:0 1px 5px rgba(20,17,34,.12)}
+.pc-a11y-switch{cursor:pointer}.pc-a11y-switch input{position:absolute;opacity:0;pointer-events:none}.pc-a11y-switch>i{width:42px;height:24px;border-radius:999px;background:#d8d5e3;position:relative;transition:.2s}.pc-a11y-switch>i:after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;left:3px;top:3px;box-shadow:0 1px 4px rgba(0,0,0,.25);transition:.2s}.pc-a11y-switch input:checked+i{background:#5c43d6}.pc-a11y-switch input:checked+i:after{transform:translateX(18px)}
+body.dark-mode .pc-accessibility-panel{background:#171522;color:#f5f3fb;border-color:#343044}body.dark-mode .pc-a11y-head,body.dark-mode .pc-a11y-row,body.dark-mode .pc-a11y-switch{border-color:#302c40}body.dark-mode .pc-segmented{background:#272334}body.dark-mode .pc-segmented button{color:#ddd8ec}body.dark-mode .pc-segmented button.active{background:#443a70;color:#fff}
+body.dark-mode{background:#100f17;color:#f3f1f8}body.dark-mode .bg-white,body.dark-mode .card,body.dark-mode .product-card,body.dark-mode .deal-card,body.dark-mode .category-item,body.dark-mode .testimonial-card,body.dark-mode .testimo-card{background-color:#1b1825!important;color:#f3f1f8!important}body.dark-mode h1,body.dark-mode h2,body.dark-mode h3,body.dark-mode h4,body.dark-mode h5,body.dark-mode h6,body.dark-mode p,body.dark-mode label,body.dark-mode span:not(.badge):not(.deal-badge):not(.cart-bubble){color:inherit}body.dark-mode input,body.dark-mode select,body.dark-mode textarea{background:#211e2d!important;color:#fff!important;border-color:#3c374d!important}body.dark-mode .text-dark{color:#f3f1f8!important}
+
+body.keyboard-navigation-active *:focus{outline:3px solid #ffbf47!important;outline-offset:3px!important}
+body.text-size-small{font-size:14px}body.text-size-medium{font-size:16px}body.text-size-large{font-size:19px}
+.categories-section .category-item{cursor:pointer}.categories-section .category-item:focus-visible{outline:3px solid #6a52dd;outline-offset:5px}.categories-section .category-item:hover .circle-thumb{transform:translateY(-3px);box-shadow:0 10px 25px rgba(42,31,98,.16)}.categories-section .circle-thumb{transition:.2s ease}
+.pc-pet-hidden{display:none!important}.pc-pet-filter-banner{margin:0 auto 22px;max-width:1200px;padding:13px 16px;border-radius:12px;background:#eeeafd;color:#30275c;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:700}.pc-pet-filter-banner span{display:flex;align-items:center;gap:9px}.pc-pet-filter-banner a{color:#5137c9;text-decoration:none}.pc-pet-filter-banner a:hover{text-decoration:underline}body.dark-mode .pc-pet-filter-banner{background:#28233c;color:#f4f1ff}body.dark-mode .pc-pet-filter-banner a{color:#c6b8ff}
+@media(max-width:600px){.pc-accessibility-menu-root{right:12px;bottom:12px}.pc-a11y-trigger span{display:none}.pc-a11y-trigger{width:50px;height:50px;justify-content:center;padding:0}.pc-accessibility-panel{bottom:58px}.pc-a11y-row,.pc-a11y-switch{font-size:.93rem}}
+
+/* ============================================================
+   PETCARE HIGH CONTRAST — UNIFIED GLOBAL MODE
+   Uses both class names for backward compatibility with every page.
+   ============================================================ */
+:is(body.high-contrast, body.pc-high-contrast) {
+  color-scheme: dark;
+  background: #000 !important;
+  color: #fff !important;
+  filter: none !important;
+  --bs-body-bg: #000;
+  --bs-body-color: #fff;
+  --bs-border-color: #fff;
+  --pc-bg: #000;
+  --pc-surface: #000;
+  --pc-surface-2: #111;
+  --pc-ink: #fff;
+  --pc-ink-2: #fff;
+  --pc-muted: #fff;
+  --pc-line: #fff;
+  --petcare-text: #fff;
+  --petcare-dark: #fff;
+  --petcare-muted: #fff;
+  --text: #fff;
+  --text-secondary: #fff;
+  --dark: #fff;
+  --darkest: #000;
+  --gray: #fff;
+  --gray-light: #fff;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(
+  .navbar, .pc-mobile-menu, .dropdown-menu-custom, .footer-petcare,
+  .card, .product-card, .deal-card, .testimonial-card, .testimo-card,
+  .category-item, .accessibility-card, .accessibility-sidebar,
+  .accessibility-option-card, .settings-card, .settings-sidebar,
+  .account-card, .appearance-card, .sidebar, .map-toolbar, .branch-card,
+  .checkout-card, .checkout-panel, .checkout-summary, .cart-item,
+  .favorite-card, .favorites-card, .product-box, .product-info,
+  .pc-accessibility-panel, .pc-product-modal__dialog, .pc-product-modal__content,
+  .modal-content, .offcanvas, .accordion-item, .list-group-item,
+  .table, table, thead, tbody, tfoot, tr, td, th
+) {
+  background-color: #000 !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(
+  h1,h2,h3,h4,h5,h6,p,span,label,legend,small,strong,em,b,li,dt,dd,
+  .text-dark,.text-muted,.text-secondary,.form-text,.help-text,.subtitle,
+  .description,.product-title,.product-price,.price,.branch-card p,
+  .pc-product-modal__description,.pc-product-modal__category
+) {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(a, a:visited) {
+  color: #ffff00 !important;
+  text-decoration-color: currentColor !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(a:hover, a:focus-visible) {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(
+  button,.btn,.form-control,.form-select,input:not([type="checkbox"]):not([type="radio"]),
+  textarea,select,.search-box,.quantity,.pc-product-modal__qty,.text-size-control,
+  .text-color-toggle,.pc-segmented
+) {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(input,textarea)::placeholder {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(
+  button,.btn,a,input,textarea,select,[tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(.btn-primary,.btn-dark,.pc-a11y-trigger,.pc-product-modal__cart) {
+  background: #ffff00 !important;
+  color: #000 !important;
+  border: 2px solid #ffff00 !important;
+  font-weight: 800 !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(.btn-primary,.btn-dark,.pc-a11y-trigger,.pc-product-modal__cart) * {
+  color: #000 !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(.badge,.deal-badge,.cart-bubble,.mobile-cart-badge) {
+  background: #ffff00 !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(.slider,.pc-a11y-switch>i) {
+  background: #333 !important;
+  border: 2px solid #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(.slider:before,.pc-a11y-switch>i:after) {
+  background: #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(input:checked + .slider, .pc-a11y-switch input:checked + i) {
+  background: #ffff00 !important;
+  border-color: #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) .pc-a11y-switch input:checked + i:after {
+  background: #000 !important;
+}
+
+:is(body.high-contrast, body.pc-high-contrast) :where(hr,.accessibility-divider,.divider) {
+  border-color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Preserve meaningful media instead of inverting it. */
+:is(body.high-contrast, body.pc-high-contrast) :where(img,video,canvas,svg) {
+  filter: contrast(1.15) !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(.leaflet-container,.leaflet-container *) {
+  color: initial;
+}
+:is(body.high-contrast, body.pc-high-contrast) .leaflet-container {
+  border: 3px solid #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) :where(.leaflet-control,.leaflet-popup-content-wrapper,.leaflet-popup-tip) {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) .leaflet-popup-content-wrapper :where(h1,h2,h3,h4,p,span,strong) {
+  color: #fff !important;
+}
+
+/* Keep selected states unmistakable without relying on purple alone. */
+:is(body.high-contrast, body.pc-high-contrast) :where(.active,[aria-current="page"],[aria-pressed="true"]):not(.color-circle) {
+  border-color: #ffff00 !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) .navbar .nav-link.active,
+:is(body.high-contrast, body.pc-high-contrast) .settings-nav-item.active {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Product color choices remain actual colors because the color itself is product data. */
+:is(body.high-contrast, body.pc-high-contrast) .color-circle {
+  border: 3px solid #fff !important;
+  box-shadow: 0 0 0 2px #000, 0 0 0 4px #fff !important;
+}
+:is(body.high-contrast, body.pc-high-contrast) .color-circle.red { background: #d80000 !important; color:#fff !important; }
+:is(body.high-contrast, body.pc-high-contrast) .color-circle.blue { background: #005fcc !important; color:#fff !important; }
+:is(body.high-contrast, body.pc-high-contrast) .color-circle.green { background: #087f23 !important; color:#fff !important; }
+:is(body.high-contrast, body.pc-high-contrast) .color-circle.gray { background: #8a8a8a !important; color:#000 !important; text-shadow:none !important; }
+:is(body.high-contrast, body.pc-high-contrast) .color-circle[aria-pressed="true"] {
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 4px !important;
+}
+
+/* Color-name aid stays limited to selectable product colors. */
+body.text-color-enabled .color-circle::after {
+  content: attr(data-color-label);
+}

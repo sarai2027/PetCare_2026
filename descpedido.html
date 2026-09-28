@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<link href="CSS/header.css" rel="stylesheet"/><link href="CSS/footer.css" rel="stylesheet"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="page_title">Descripción de pedido | Petcare</title>
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<!-- CSS -->
+<link href="CSS/descpedido.css" rel="stylesheet"/>
+<link href="CSS/site-overrides.css" rel="stylesheet"/>
+<link href="CSS/petcare-requested-fixes.css" rel="stylesheet"/>
+<link href="CSS/petcare-finalization.css" rel="stylesheet"/></head>
+<body><div data-petcare-header=""></div>
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<!-- =========================================================
+     CONTENIDO
+========================================================= -->
+<main class="container checkout-wrapper">
+<!-- ENCABEZADO -->
+<div class="checkout-header scroll-reveal">
+<span class="eyebrow" data-i18n="checkout_label">
+            FINALIZAR COMPRA
+        </span>
+<h1 data-i18n="checkout_title">
+            Descripción del pedido
+        </h1>
+<p data-i18n="checkout_desc">
+            Completa tus datos para recibir tu pedido de Petcare.
+        </p>
+</div>
+<div class="row g-4">
+<!-- =================================================
+             COLUMNA IZQUIERDA
+        ================================================= -->
+<div class="col-lg-8">
+<!-- DATOS DE ENTREGA -->
+<div class="checkout-card scroll-reveal">
+<div class="checkout-title">
+<div class="checkout-title-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h3 data-i18n="delivery_title">
+                            Datos de entrega
+                        </h3>
+<p data-i18n="delivery_desc">
+                            ¿Dónde debemos enviar tu pedido?
+                        </p>
+</div>
+</div>
+<form class="checkout-form">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="email_label">
+                                    Correo electrónico
+                                </label>
+<input class="form-control" data-i18n-placeholder="email_placeholder" placeholder="correo@ejemplo.com" required="" type="email"/>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="name_label">
+                                    Nombre
+                                </label>
+<input class="form-control" data-i18n-placeholder="name_placeholder" placeholder="Tu nombre" required="" type="text"/>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="lastname_label">
+                                    Apellido
+                                </label>
+<input class="form-control" data-i18n-placeholder="lastname_placeholder" placeholder="Tu apellido" required="" type="text"/>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="city_label">
+                                    Ciudad
+                                </label>
+<input class="form-control" data-i18n-placeholder="city_placeholder" placeholder="Ciudad" required="" type="text"/>
+</div>
+</div>
+<div class="col-md-8">
+<div class="form-group">
+<label class="form-label" data-i18n="address_label">
+                                    Dirección
+                                </label>
+<input class="form-control" data-i18n-placeholder="address_placeholder" placeholder="Dirección de entrega" required="" type="text"/>
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="form-label" data-i18n="postal_label">
+                                    Código postal
+                                </label>
+<input class="form-control" data-i18n-placeholder="postal_placeholder" placeholder="0000" required="" type="text"/>
+</div>
+</div>
+</div>
+<button class="btn-form-submit" type="submit">
+<i class="fa-solid fa-check"></i>
+<span data-i18n="save_delivery">
+                            Guardar datos de entrega
+                        </span>
+</button>
+</form>
+</div>
+<!-- FORMA DE ENVÍO -->
+<div class="checkout-card scroll-reveal">
+<div class="checkout-title">
+<div class="checkout-title-icon">
+<i class="fa-solid fa-truck"></i>
+</div>
+<div>
+<h3 data-i18n="shipping_title">
+                            Forma de envío
+                        </h3>
+<p data-i18n="shipping_desc">
+                            Selecciona cómo quieres recibir tu pedido.
+                        </p>
+</div>
+</div>
+<form class="checkout-form">
+<div class="shipping-options">
+<!-- ESTÁNDAR -->
+<label class="shipping-option">
+<input checked="" name="shipping" type="radio" value="standard"/>
+<div class="shipping-option-content">
+<strong data-i18n="standard_shipping">
+                                    Envío estándar
+                                </strong>
+<span data-i18n="standard_desc">
+                                    Recíbelo en 3–5 días
+                                </span>
+</div>
+<div class="shipping-price">
+                                $5.00
+                            </div>
+</label>
+<!-- EXPRESS -->
+<label class="shipping-option">
+<input name="shipping" type="radio" value="express"/>
+<div class="shipping-option-content">
+<strong data-i18n="express_shipping">
+                                    Envío express
+                                </strong>
+<span data-i18n="express_desc">
+                                    Recíbelo en 1–2 días
+                                </span>
+</div>
+<div class="shipping-price">
+                                $15.00
+                            </div>
+</label>
+<!-- PERSONALIZADO -->
+<label class="shipping-option">
+<input name="shipping" type="radio" value="custom"/>
+<div class="shipping-option-content">
+<strong data-i18n="custom_shipping">
+                                    Personalizado
+                                </strong>
+<span data-i18n="custom_desc">
+                                    Coordina tu entrega
+                                </span>
+</div>
+<div class="shipping-price">
+                                $18.50
+                            </div>
+</label>
+</div>
+<button class="btn-form-submit" type="submit">
+<i class="fa-solid fa-truck"></i>
+<span data-i18n="confirm_shipping">
+                            Confirmar envío
+                        </span>
+</button>
+</form>
+</div>
+<!-- OBSERVACIONES -->
+<div class="checkout-card scroll-reveal">
+<div class="checkout-title">
+<div class="checkout-title-icon">
+<i class="fa-regular fa-message"></i>
+</div>
+<div>
+<h3 data-i18n="observations_title">
+                            Observaciones
+                        </h3>
+<p data-i18n="observations_desc">
+                            Información adicional para tu entrega.
+                        </p>
+</div>
+</div>
+<form class="checkout-form">
+<textarea class="form-control" data-i18n-placeholder="observations_placeholder" placeholder="Ej. dejar el pedido con el vigilante..." rows="4"></textarea>
+<button class="btn-form-submit" type="submit">
+<i class="fa-solid fa-paper-plane"></i>
+<span data-i18n="save_observations">
+                            Guardar observaciones
+                        </span>
+</button>
+</form>
+</div>
+<!-- PAGO -->
+<div class="checkout-card scroll-reveal">
+<div class="checkout-title">
+<div class="checkout-title-icon">
+<i class="fa-regular fa-credit-card"></i>
+</div>
+<div>
+<h3 data-i18n="payment_title">
+                            Método de pago
+                        </h3>
+<p data-i18n="payment_desc">
+                            Tus datos de pago están protegidos.
+                        </p>
+</div>
+</div>
+<form class="checkout-form">
+<div class="payment-secure" data-i18n="secure_payment">
+<i class="fa-solid fa-lock"></i>
+
+                        Pago seguro y protegido
+
+                    </div>
+<div class="form-group">
+<label class="form-label" data-i18n="card_number_label">
+                            Número de tarjeta
+                        </label>
+<div class="card-input-wrapper">
+<input class="form-control" data-i18n-placeholder="card_number_placeholder" placeholder="0000 0000 0000 0000" required="" type="text"/>
+<i class="fa-regular fa-credit-card"></i>
+</div>
+<div class="card-brands">
+<span class="card-brand">
+                                VISA
+                            </span>
+<span class="card-brand">
+                                MC
+                            </span>
+<span class="card-brand">
+                                AMEX
+                            </span>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="expiration_label">
+                                    Fecha de vencimiento
+                                </label>
+<input class="form-control" data-i18n-placeholder="expiration_placeholder" placeholder="MM / AA" required=""/>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label class="form-label" data-i18n="cvv_label">
+                                    CVV
+                                </label>
+<input class="form-control" data-i18n-placeholder="cvv_placeholder" placeholder="123" required="" type="password"/>
+</div>
+</div>
+</div>
+<button class="btn-form-submit" type="submit">
+<i class="fa-solid fa-credit-card"></i>
+<span data-i18n="save_payment">
+                            Guardar método de pago
+                        </span>
+</button>
+</form>
+</div>
+</div>
+<!-- =================================================
+             COLUMNA DERECHA
+        ================================================= -->
+<div class="col-lg-4">
+<div class="checkout-card order-summary scroll-reveal-right">
+<div class="summary-header">
+<h3 data-i18n="summary_title">
+                        Resumen del pedido
+                    </h3>
+<span data-i18n="summary_products" id="summary-product-count">
+                        0 productos
+                    </span>
+</div>
+<div id="order-summary-products"></div>
+<div class="summary-costs">
+<div class="summary-item">
+<span data-i18n="subtotal">
+                            Subtotal
+                        </span>
+<span id="subtotal-summary">
+                            $0.00
+                        </span>
+</div>
+<div class="summary-item">
+<span data-i18n="shipping">
+                            Envío
+                        </span>
+<span id="shipping-summary">
+                            $5.00
+                        </span>
+</div>
+<hr class="summary-divider"/>
+<div class="summary-total">
+<span data-i18n="total">
+                            Total
+                        </span>
+<span id="total-summary">
+                            $42.32
+                        </span>
+</div>
+<button class="btn-finalizar" type="button">
+<i class="fa-solid fa-lock"></i>
+<span data-i18n="finish_purchase">
+                            Finalizar compra
+                        </span>
+</button>
+<div class="checkout-security" data-i18n="secure_purchase">
+<i class="fa-solid fa-shield-halved"></i>
+
+                        Compra segura y protegida
+
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="JS/languague.js"></script>
+<script src="JS/cart.js"></script>
+<script src="JS/AddCart.js"></script>
+<script src="JS/descpedido.js"></script>
+<!-- Modal global de idioma: requerido por el botón Idioma del header -->
+<div class="custom-modal" id="languageModal">
+<div class="modal-content-custom">
+<div class="modal-header-custom">
+<h5 data-i18n="lang_modal_title">Seleccionar idioma</h5>
+<button aria-label="Cerrar" class="close-btn" id="closeLanguageModal" type="button">×</button>
+</div>
+<div class="modal-body-custom">
+<div class="language-options">
+<button class="lang-option" data-lang="en" type="button">
+<img alt="UK" class="flag-img" src="https://flagcdn.com/w40/gb.png"/>
+          English (UK)
+        </button>
+<button class="lang-option" data-lang="es" type="button">
+<img alt="ES" class="flag-img" src="https://flagcdn.com/w40/es.png"/>
+          Español (ES)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<div data-petcare-footer=""></div><script src="JS/shared.js"></script><script src="JS/petcare-requested-fixes.js"></script>
+<script src="JS/petcare-finalization.js"></script></body>
+</html>
+<!-- Ultimo cambio de jen -->
